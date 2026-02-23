@@ -90,6 +90,7 @@ Key findings:
 
 ### Features Used
 - Region
+- area
 - Crop
 - Season
 - Rainfall

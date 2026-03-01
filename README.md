@@ -136,8 +136,14 @@ Models were evaluated using:
 
 - **Python:** pandas, numpy, scikit-learn, XGBoost
 - **Visualization:** matplotlib, seaborn
-- **Deployment (planned):** Streamlit
+- **Deployment:** Flask
 
+
+---
+
+## Kenya Crop Yield Predictor
+
+<img src="./images/Screenshot 2026-03-01 145927.png">
 
 ---
 

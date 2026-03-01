@@ -90,6 +90,7 @@ Key findings:
 
 ### Features Used
 - Region
+- area
 - Crop
 - Season
 - Rainfall
@@ -109,7 +110,9 @@ Models were evaluated using:
 - Root Mean Squared Error (RMSE)
 - R² Score
 
-![Models Performance Comparision plot](images\Model_Performance_Comparison.png)
+# Models Performance Comparision plot
+
+<img src="./images/Model_Performance_Comparison.png">
 ---
 
 ## 📈 Key Insights

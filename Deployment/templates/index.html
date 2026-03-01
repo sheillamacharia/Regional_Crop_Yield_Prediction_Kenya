@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kenya Crop Yield Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Kenya Crop Yield Predictor</h1>
+
+        <div class="info-box">
+            <p>
+                This tool predicts crop yield (tons per hectare) across Kenyan regions 
+                using a machine learning model trained on historical agricultural data. 
+                The model analyzes environmental and farming factors such as rainfall, 
+                temperature, pesticide usage, crop type, season, and year 
+                to estimate expected yield.
+            </p>
+        </div>
+
+        <form method="POST" action="/predict">
+
+            <label>Region:</label>
+            <select name="Region" required>
+                {% for r in regions %}
+                    <option value="{{ r }}">{{ r }}</option>
+                {% endfor %}
+            </select>
+
+            <label>Crop:</label>
+            <select name="Item" required>
+                {% for i in items %}
+                    <option value="{{ i }}">{{ i }}</option>
+                {% endfor %}
+            </select>
+
+            <label>Year:</label>
+            <input type="number" name="Year" min="2000" max="2025" step="1" required>
+
+            <label>Season:</label>
+            <select name="season_name" required>
+                {% for s in seasons %}
+                    <option value="{{ s }}">{{ s }}</option>
+                {% endfor %}
+            </select>
+
+            <label>Area (ha):</label>
+            <input type="number" name="area" step="0.000001" required>
+
+            <label>Production (tons):</label>
+            <input type="number" name="production" step="0.000001" required>
+
+            <label>Temperature - (Celsius):</label>
+            <input type="number" name="Temperature" step="0.000001" required>
+
+            <label>Rainfall (mm):</label>
+            <input type="number" name="Rainfall" step="0.000001" required>
+
+            <label>Pesticides_hg_per_ha:</label>
+            <input type="number" name="Pesticides" step="0.000001" required>
+
+            <button type="submit">Predict Yield</button>
+
+        </form>
+
+        {% if prediction_text %}
+        <div class="result">
+            {{ prediction_text }}
+        </div>
+        {% endif %}
+
+    </div>
+</body>
+</html>

@@ -143,6 +143,8 @@ Models were evaluated using:
 
 ## Kenya Crop Yield Predictor
 
+https://regional-crop-yield-prediction-kenya.onrender.com
+
 <img src="./images/Screenshot 2026-03-01 145927.png">
 
 ---
